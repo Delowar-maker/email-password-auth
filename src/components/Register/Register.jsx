@@ -8,14 +8,16 @@ const Register = () => {
         setEmail(email.target.value);
     }
 
-  
+    const handlePasswordBlur = (event)=>{
+        console.log(event.target.value);
+    }
     return (
         <div>
             <h1>Register Form:</h1>
             <form onChange={handleEmailChange} action="">
                 <input type="email" name="email" id="email" />
                 <br />
-                <input type="password" name="password"   id="password" />
+                <input onBlur={handlePasswordBlur} type="password" name="password"   id="password" />
                 <br />
                 <input type="submit" value="Register" />
             </form>
